@@ -12,3 +12,23 @@
     padding-left: 1rem;
     max-width: 100%;
   }
+
+ .css-1k67eer {
+    width: 100%;
+    flex: 1 1 calc(6.25% - 1rem);
+}
+
+.css-ocqkz7 {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.e1tzin5v2{
+    width: 100%;
+}
