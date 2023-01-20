@@ -32,3 +32,10 @@
 .e1tzin5v2{
     width: 100%;
 }
+
+p, ol, ul, dl {
+    margin: 0px 0px 1rem;
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 600;
+}

@@ -147,11 +147,8 @@ for treino in treinos:
         plt.clf()
     cont+=1
 
-# dias=[]
-# for i in range(len(dfResul)):
-#     dias.append(i)
-# st.write(dias)
-
-# plt.stackplot(dias,(vet[0].tolist()),(vet[2].tolist()))
-# plt.tight_layout()
-# plt.show()
+tamanho=len(dfResul)
+ults=dfResul.iloc[tamanho-5:tamanho,0:2]
+st.title("Últimos 5 treinos")
+for i,j in ults.iterrows():
+    st.write(j["treino"],'-',j["dia"])
