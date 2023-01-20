@@ -103,7 +103,7 @@ dfResul=pd.concat([df,dfInsert],ignore_index=True)
 dfResul.to_csv("treinos.csv",index=False)
 
 qnt_treinos=len(dfResul)
-st.write(f"No total foram realizados {qnt_treinos} treinos")
+st.title(f"No total foram realizados {qnt_treinos} treinos")
 all_treinos=pd.Series.unique(dfResul["treino"])
 all_treinos.tolist()
 cont_treinos=[]
@@ -113,9 +113,9 @@ for i in all_treinos:
     cont_treinos.append([i,len(dfCorte)])
 
 for i in cont_treinos:
-    st.write(f"{i[1]} treinos de {i[0]}")
+    st.subheader(f"{i[1]} treinos de {i[0]}")
 
-style.use('fivethirtyeight')
+# style.use('fivethirtyeight')
 
 
 colunas=st.columns(len(treinos))
@@ -139,8 +139,10 @@ for treino in treinos:
                 else:
                     df_graph.iloc[i,j]=0
     with colunas[cont]:
-        st.title(treino[0])
+        plt.title(treino[0])
         plt.plot(df_graph)
+        plt.legend(df_graph.keys(),loc="best")
+        plt.grid(True)
         st.pyplot(plt)
         plt.clf()
     cont+=1
